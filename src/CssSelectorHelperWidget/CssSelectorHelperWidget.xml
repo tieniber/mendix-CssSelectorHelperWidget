@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidget" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>CssSelectorHelperWidget</name>
+    <description>CSS selector helper. This widget finds its previous sibling in the DOM tree and puts attribute cssselectorhelper on it with the specified value.</description>
+    <icon>
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwY
+AAABgUlEQVR4nNWSS0sCYRSG5xuzGq2orKDAorZWUNBtEW4K+gW1bBX0J9rZtp8QFXaDauHC
+VtKuQiO1BEUtGiZ1vAXOmOM303dOC7XL1k30rM7ifXh54RBE5JqFb9r8U7nl66oyuE6p1Sod
+7O5w2NpbTbyk6mG51GsVZgYEc4vpPvcuK9pwt8VhEwgh383PJbp+7G8vStNdkJRkly+mfcDm
+RXC8tZJ4zUfEzE2msncVmrTo54EnSmm9EBERYe1S8gXCWAdEuaAZH3OHUX9KAQCq64G0snQW
+l1VqGAZjrJbjEBEQHPtROSvjb8JSwemOuG4zBmMIcBoUZ9xRT6IIjUC9efni5SaZ/tKqBgNA
+QFQr7xvexO6dyAAQ8SVXXDyJx1L5Wqy2mWxNdW6HynKZchxKZbrje3jT9KPHrFUQnKN9WjHn
+E5VoThnu75noNWtKqTaZND4Mk6m8N57tNBMzwvyIbcw+dHAdA0SeVlYXHCojnvsEcJy9DVZm
+J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
+    </icon>
+    <properties>
+        <property key="attributeValue" type="string">
+            <caption>Attribute value</caption>
+            <category>Common</category>
+            <description>Value to put on the cssselectorhelper attribute. Use CSS selectors like table[cssselectorhelper=your-attribute-value] to style specific parts of the application.</description>
+        </property>
+    </properties>
+</widget>

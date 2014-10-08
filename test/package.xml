@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.mendix.com/package/1.0/">
+  <modelerProject xmlns="http://www.mendix.com/modelerProject/1.0/">
+    <project />
+    <projectFile path="CssSelectorWidgetDemo.mpr" />
+    <files>
+      <file path="javasource\administration\proxies\Account.java" />
+      <file path="javasource\administration\proxies\AccountPasswordData.java" />
+      <file path="javasource\administration\proxies\microflows\Microflows.java" />
+      <file path="javasource\com\mendix\core\Core.java" />
+      <file path="javasource\myfirstmodule\proxies\Fruit.java" />
+      <file path="javasource\myfirstmodule\proxies\SomeEntity.java" />
+      <file path="javasource\myfirstmodule\proxies\microflows\Microflows.java" />
+      <file path="javasource\system\UserActionsRegistrar.java" />
+      <file path="javasource\system\actions\VerifyPassword.java" />
+      <file path="javasource\system\proxies\DeviceType.java" />
+      <file path="javasource\system\proxies\Error.java" />
+      <file path="javasource\system\proxies\EventStatus.java" />
+      <file path="javasource\system\proxies\FileDocument.java" />
+      <file path="javasource\system\proxies\Image.java" />
+      <file path="javasource\system\proxies\Language.java" />
+      <file path="javasource\system\proxies\ScheduledEventInformation.java" />
+      <file path="javasource\system\proxies\Session.java" />
+      <file path="javasource\system\proxies\SoapFault.java" />
+      <file path="javasource\system\proxies\Statistics.java" />
+      <file path="javasource\system\proxies\TimeZone.java" />
+      <file path="javasource\system\proxies\User.java" />
+      <file path="javasource\system\proxies\UserRole.java" />
+      <file path="javasource\system\proxies\XASInstance.java" />
+      <file path="javasource\system\proxies\microflows\Microflows.java" />
+      <file path="theme\index.html" />
+      <file path="theme\css\layout.css" />
+      <file path="theme\css\theme.css" />
+      <file path="theme\css\fonts\OpenSans-Bold.eot" />
+      <file path="theme\css\fonts\OpenSans-Bold.svg" />
+      <file path="theme\css\fonts\OpenSans-Bold.ttf" />
+      <file path="theme\css\fonts\OpenSans-Bold.woff" />
+      <file path="theme\css\fonts\OpenSans-Regular.eot" />
+      <file path="theme\css\fonts\OpenSans-Regular.svg" />
+      <file path="theme\css\fonts\OpenSans-Regular.ttf" />
+      <file path="theme\css\fonts\OpenSans-Regular.woff" />
+      <file path="theme\css\fonts\OpenSans-Semibold.eot" />
+      <file path="theme\css\fonts\OpenSans-Semibold.svg" />
+      <file path="theme\css\fonts\OpenSans-Semibold.ttf" />
+      <file path="theme\css\fonts\OpenSans-Semibold.woff" />
+      <file path="theme\css\images\layout\logo.png" />
+      <file path="theme\css\images\mobile\agents.png" />
+      <file path="theme\css\images\mobile\footer-bullet.png" />
+      <file path="theme\css\images\mobile\home.png" />
+      <file path="widgets\CssSelectorHelperWidget.mpk" />
+      <file path="deployment\data\.policy" />
+      <file path="deployment\data\security.policy" />
+      <file path="deployment\data\database\hsqldb\default\default.properties" />
+      <file path="deployment\data\database\hsqldb\default\default.script" />
+    </files>
+  </modelerProject>
+</package>
