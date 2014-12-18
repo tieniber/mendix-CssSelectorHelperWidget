@@ -14,20 +14,28 @@
 	CSS selector helper. This widget finds its previous sibling in the DOM tree and puts attribute cssselectorhelper on it with the specified value.
 
 */
-dojo.provide("CssSelectorHelperWidget.widget.CssSelectorHelperWidget");
+(function () {
+    'use strict';
 
-dojo.declare("CssSelectorHelperWidget.widget.CssSelectorHelperWidget", [ mxui.widget._WidgetBase ], {
-    postCreate : function () {
-        'use strict';
+    require([
 
-        if (this.domNode.previousSibling) {
-            this.domNode.previousSibling.setAttribute('cssSelectorHelper', this.attributeValue);
-        } else {
-            console.warn('CssSelectorHelperWidget: No previous sibling found');
-        }
+        'dojo/_base/declare', 'mxui/widget/_WidgetBase', 'dijit/_Widget'
 
-    },
-    uninitialize : function () {
-        'use strict';
-    }
-});
+    ], function (declare, _WidgetBase, _Widget) {
+
+        // Declare widget.
+        return declare('CssSelectorHelperWidget.widget.CssSelectorHelperWidget', [ _WidgetBase, _Widget ], {
+
+            postCreate : function () {
+
+                if (this.domNode.previousSibling) {
+                    this.domNode.previousSibling.setAttribute('cssSelectorHelper', this.attributeValue);
+                } else {
+                    console.warn('CssSelectorHelperWidget: No previous sibling found');
+                }
+
+            }
+        });
+    });
+
+}());
