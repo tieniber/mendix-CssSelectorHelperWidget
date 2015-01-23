@@ -43,7 +43,7 @@
 							if (this.domNode.parentNode) {
 								this.domNode.parentNode.setAttribute('cssSelectorHelper', attributeValue);
 							} else {
-								console.warn('CssSelectorHelperWidget: No previous sibling found');
+								console.warn('CssSelectorHelperWidget: No parent node found');
 							}
 						}
 						else {

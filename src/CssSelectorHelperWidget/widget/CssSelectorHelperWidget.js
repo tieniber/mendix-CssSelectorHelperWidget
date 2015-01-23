@@ -28,12 +28,20 @@
 
             postCreate : function () {
 
-                if (this.domNode.previousSibling) {
-                    this.domNode.previousSibling.setAttribute('cssSelectorHelper', this.attributeValue);
-                } else {
-                    console.warn('CssSelectorHelperWidget: No previous sibling found');
-                }
-
+				if( this.applyTo == 'Parent' ) {
+					if (this.domNode.parentNode) {
+						this.domNode.parentNode.setAttribute('cssSelectorHelper', attributeValue);
+					} else {
+						console.warn('CssSelectorHelperWidget: No parent node found');
+					}
+				}
+				else {
+					if (this.domNode.previousSibling) {
+						this.domNode.previousSibling.setAttribute('cssSelectorHelper', this.attributeValue);
+					} else {
+						console.warn('CssSelectorHelperWidget: No previous sibling found');
+					}
+				}
             }
         });
     });

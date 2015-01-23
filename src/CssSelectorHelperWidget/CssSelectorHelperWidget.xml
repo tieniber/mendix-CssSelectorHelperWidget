@@ -19,5 +19,14 @@ J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
             <category>Common</category>
             <description>Value to put on the cssselectorhelper attribute. Use CSS selectors like table[cssselectorhelper=your-attribute-value] to style specific parts of the application.</description>
         </property>
+		<property key="applyTo" type="enumeration" required="true" defaultValue="Sibling">
+			<caption>Render as</caption>
+			<category>Common</category>
+			<description>To which element should the css be applied, the parent element or previous sibling.</description>
+			<enumerationValues>
+				<enumerationValue key="Sibling">Sibling</enumerationValue>
+				<enumerationValue key="Parent">Parent</enumerationValue>
+			</enumerationValues>
+		</property>
     </properties>
 </widget>
