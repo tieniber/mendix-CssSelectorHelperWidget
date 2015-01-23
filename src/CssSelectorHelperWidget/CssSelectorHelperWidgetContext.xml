@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidgetContext" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>CssSelectorHelperWidget (with Context)</name>
+    <description>CSS selector helper. This widget finds its an element in the DOM tree and puts an attributes value as the cssselectorhelper on it.</description>
+    <icon>
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwY
+AAABgUlEQVR4nNWSS0sCYRSG5xuzGq2orKDAorZWUNBtEW4K+gW1bBX0J9rZtp8QFXaDauHC
+VtKuQiO1BEUtGiZ1vAXOmOM303dOC7XL1k30rM7ifXh54RBE5JqFb9r8U7nl66oyuE6p1Sod
+7O5w2NpbTbyk6mG51GsVZgYEc4vpPvcuK9pwt8VhEwgh383PJbp+7G8vStNdkJRkly+mfcDm
+RXC8tZJ4zUfEzE2msncVmrTo54EnSmm9EBERYe1S8gXCWAdEuaAZH3OHUX9KAQCq64G0snQW
+l1VqGAZjrJbjEBEQHPtROSvjb8JSwemOuG4zBmMIcBoUZ9xRT6IIjUC9efni5SaZ/tKqBgNA
+QFQr7xvexO6dyAAQ8SVXXDyJx1L5Wqy2mWxNdW6HynKZchxKZbrje3jT9KPHrFUQnKN9WjHn
+E5VoThnu75noNWtKqTaZND4Mk6m8N57tNBMzwvyIbcw+dHAdA0SeVlYXHCojnvsEcJy9DVZm
+J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
+    </icon>
+    <properties>
+		<property key="attributeContainingValue" allowNonPersistableEntities="true" type="attribute" required="true">
+			<caption>Attribute Value</caption>
+			<category>Common</category>
+			<description>The attribute that is used to set the CSS Classes (when no attributes the function is disabled)</description>
+			<attributeTypes>
+				<attributeType name="String"/>
+				<attributeType name="Enum"/>
+				<attributeType name="Boolean"/>
+			</attributeTypes>
+		</property>
+		<property key="applyTo" type="enumeration" required="true" defaultValue="Sibling">
+			<caption>Render as</caption>
+			<category>Common</category>
+			<description>To which element should the css be applied, the parent element or previous sibling.</description>
+			<enumerationValues>
+				<enumerationValue key="Sibling">Sibling</enumerationValue>
+				<enumerationValue key="Parent">Parent</enumerationValue>
+			</enumerationValues>
+		</property>
+    </properties>
+</widget>
