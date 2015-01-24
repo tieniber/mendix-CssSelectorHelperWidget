@@ -709,3 +709,12 @@ div[cssselectorhelper=group2]>div div.mx-referenceselector-input-wrapper>label{
 	font-weight: bold;
 }
 
+div[cssselectorhelper=Apples] {
+	background-color: rgb(197, 245, 197);
+}
+div[cssselectorhelper=Oranges] {
+	background-color: rgb(255, 207, 119);
+}
+div[cssselectorhelper=Bananas] {
+	background-color: rgb(255, 255, 195);
+}

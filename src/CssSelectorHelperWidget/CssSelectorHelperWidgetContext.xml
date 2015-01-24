@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidget" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
-    <name>CssSelectorHelperWidget</name>
-    <description>CSS selector helper. This widget finds its previous sibling in the DOM tree and puts attribute cssselectorhelper on it with the specified value.</description>
+<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidgetContext" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>CssSelectorHelperWidget (with Context)</name>
+    <description>CSS selector helper. This widget finds its an element in the DOM tree and puts an attributes value as the cssselectorhelper on it.</description>
     <icon>
 iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwY
 AAABgUlEQVR4nNWSS0sCYRSG5xuzGq2orKDAorZWUNBtEW4K+gW1bBX0J9rZtp8QFXaDauHC
@@ -14,11 +14,16 @@ E5VoThnu75noNWtKqTaZND4Mk6m8N57tNBMzwvyIbcw+dHAdA0SeVlYXHCojnvsEcJy9DVZm
 J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
     </icon>
     <properties>
-        <property key="attributeValue" type="string">
-            <caption>Attribute value</caption>
-            <category>Common</category>
-            <description>Value to put on the cssselectorhelper attribute. Use CSS selectors like table[cssselectorhelper=your-attribute-value] to style specific parts of the application.</description>
-        </property>
+		<property key="attributeContainingValue" allowNonPersistableEntities="true" type="attribute" required="true">
+			<caption>Attribute Value</caption>
+			<category>Common</category>
+			<description>The attribute that is used to set the CSS Classes (when no attributes the function is disabled)</description>
+			<attributeTypes>
+				<attributeType name="String"/>
+				<attributeType name="Enum"/>
+				<attributeType name="Boolean"/>
+			</attributeTypes>
+		</property>
 		<property key="applyTo" type="enumeration" required="true" defaultValue="Sibling">
 			<caption>Render as</caption>
 			<category>Common</category>
