@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidgetContext" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+<widget id="CssSelectorHelperWidget.widget.CssSelectorHelperWidgetContext" needsEntityContext="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>CssSelectorHelperWidget (with Context)</name>
     <description>CSS selector helper. This widget finds its an element in the DOM tree and puts an attributes value as the cssselectorhelper on it.</description>
     <icon>
