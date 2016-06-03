@@ -6,7 +6,7 @@
 	@version   : 2.0
 	@author    : Marcel Groeneweg
 	@date      : 08-10-2014
-	@copyright : Synobsys
+	@copyright : ITvisors
 	@license   : Apache License, Version 2.0, January 2004
 
 	Documentation
@@ -19,9 +19,9 @@
 
     require([
 
-        'dojo/_base/declare', 'mxui/widget/_WidgetBase', 'dijit/_Widget'
+        'dojo/_base/declare', 'mxui/widget/_WidgetBase', 'dijit/_Widget', 'dojo/query',
 
-    ], function (declare, _WidgetBase, _Widget) {
+    ], function (declare, _WidgetBase, _Widget, dojoQuery) {
 		
 
         // Declare widget.
@@ -32,25 +32,51 @@
             setupAttribute : function () {
 				
 				
-				var attributeValue = '';
+				var attributeValue = '',
+					node,
+					refNodeList;
 				
 				if( this._mxobj != null ) {
 					if( this._mxobj.has(this.attributeContainingValue) ) {
 						attributeValue = this._mxobj.get(this.attributeContainingValue);
 
-				
-						if( this.applyTo == 'Parent' ) {
-							if (this.domNode.parentNode) {
-								this.domNode.parentNode.setAttribute('cssSelectorHelper', attributeValue);
+						if (this.cssSelector) {
+							refNodeList = dojoQuery(this.cssSelector);
+							if (refNodeList && refNodeList.length) {
+								node = refNodeList[0];
+								if (this.applyTo == 'Parent' ) {
+									if (node.parentNode) {
+										node.parentNode.setAttribute('cssSelectorHelper', attributeValue);
+									} else {
+										console.warn('CssSelectorHelperWidget: No parent node found for CSS selector ' + this.cssSelector);
+									}
+								}
+								else {
+									if (node.previousSibling) {
+										node.previousSibling.setAttribute('cssSelectorHelper', attributeValue);
+									} else {
+										console.warn('CssSelectorHelperWidget: No previous sibling found for CSS selector ' + this.cssSelector);
+									}
+								}
 							} else {
-								console.warn('CssSelectorHelperWidget: No parent node found');
+								console.warn('CssSelectorHelperWidget: Nothing found for CSS selector ' + this.cssSelector);
 							}
-						}
-						else {
-							if (this.domNode.previousSibling) {
-								this.domNode.previousSibling.setAttribute('cssSelectorHelper', attributeValue);
-							} else {
-								console.warn('CssSelectorHelperWidget: No previous sibling found');
+							
+						} else {
+				
+							if (this.applyTo == 'Parent' ) {
+								if (this.domNode.parentNode) {
+									this.domNode.parentNode.setAttribute('cssSelectorHelper', attributeValue);
+								} else {
+									console.warn('CssSelectorHelperWidget: No parent node found');
+								}
+							}
+							else {
+								if (this.domNode.previousSibling) {
+									this.domNode.previousSibling.setAttribute('cssSelectorHelper', attributeValue);
+								} else {
+									console.warn('CssSelectorHelperWidget: No previous sibling found');
+								}
 							}
 						}
 					}

@@ -33,5 +33,10 @@ J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
 				<enumerationValue key="Parent">Parent</enumerationValue>
 			</enumerationValues>
 		</property>
+        <property key="cssSelector" type="string" required="false">
+            <caption>CSS selector</caption>
+			<category>Common</category>
+            <description>When specified, this CSS selector is used to locate the element, rather than the direct parent or sibling</description>
+        </property>                		
     </properties>
 </widget>
