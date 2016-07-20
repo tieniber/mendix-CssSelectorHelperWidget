@@ -6,7 +6,7 @@
 	@version   : 2.0
 	@author    : Marcel Groeneweg
 	@date      : 08-10-2014
-	@copyright : ITvisors
+	@copyright : Synobsys
 	@license   : Apache License, Version 2.0, January 2004
 
 	Documentation
