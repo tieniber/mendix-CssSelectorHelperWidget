@@ -17,7 +17,7 @@ Set an attribute on the previous sibling node in the DOM to allow CSS selection 
 Normal installation using the App Store.
 
 ##Dependencies
-Mendix 5.8.1 Environment
+Mendix 6.10.2 Environment
  
 ##Configuration
 In the designer, place this widget directly underneath the element (from here on called the reference element) you want to style and set a value for the attribute. 
