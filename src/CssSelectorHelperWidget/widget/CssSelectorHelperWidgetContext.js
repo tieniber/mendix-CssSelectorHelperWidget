@@ -3,10 +3,10 @@
 	========================
 
 	@file      : CssSelectorHelperWidget.js
-	@version   : 2.0
+	@version   : 1.0
 	@author    : Marcel Groeneweg
-	@date      : 08-10-2014
-	@copyright : Synobsys
+	@date      : 15-02-2017
+	@copyright : ITvisors
 	@license   : Apache License, Version 2.0, January 2004
 
 	Documentation
