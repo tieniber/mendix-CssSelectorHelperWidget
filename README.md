@@ -11,7 +11,9 @@ This widget places an attribute on the previous sibling in the DOM tree.
 Style a specific table or group box or elements within a container
 
 ##Features And Limitations
-Set an attribute on the previous sibling node in the DOM to allow CSS selection styling on it.
+Set an attribute on the previous sibling node in the DOM to allow CSS selection styling on it. This can also be done dynamically using the context aware version.
+
+Note that this widget can be used in offline apps too.
 
 ##Installation
 Normal installation using the App Store.

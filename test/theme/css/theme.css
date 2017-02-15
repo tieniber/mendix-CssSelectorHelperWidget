@@ -718,3 +718,11 @@ div[cssselectorhelper=Oranges] {
 div[cssselectorhelper=Bananas] {
 	background-color: rgb(255, 255, 195);
 }
+
+div.mx-listview.ListviewPaddingOnItem ul.mx-list li.mx-listview-item {
+	padding: 0px;
+}
+
+div.mx-listview.ListviewPaddingOnItem ul.mx-list li.mx-listview-item div.mx-dataview-content {
+	padding: 5px;
+}
