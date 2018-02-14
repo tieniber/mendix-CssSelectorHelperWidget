@@ -22,6 +22,9 @@ J3me/JSb4Z++5yc2qRfyt/VqtQAAAABJRU5ErkJggg==
 				<attributeType name="String"/>
 				<attributeType name="Enum"/>
 				<attributeType name="Boolean"/>
+				<attributeType name="Decimal"/>
+				<attributeType name="Integer"/>
+				<attributeType name="Long"/>
 			</attributeTypes>
 		</property>
 		<property key="applyTo" type="enumeration" required="true" defaultValue="Sibling">
