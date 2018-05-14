@@ -72,8 +72,8 @@
 								}
 							}
 							else {
-								if (this.domNode.previousSibling) {
-									this.domNode.previousSibling.setAttribute('cssSelectorHelper', attributeValue);
+								if (this.domNode.previousElementSibling) {
+									this.domNode.previousElementSibling.setAttribute('cssSelectorHelper', attributeValue);
 								} else {
 									console.warn('CssSelectorHelperWidget: No previous sibling found');
 								}
