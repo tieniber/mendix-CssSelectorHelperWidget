@@ -27,11 +27,22 @@
         // Declare widget.
         return declare('CssSelectorHelperWidget.widget.CssSelectorHelperWidgetContext', [ _WidgetBase, _Widget ], {
 
-			_mxobj              : null,
-		
-            setupAttribute : function () {
+			_mxobj: null,
+			
+			update : function(obj, callback){
+				dojo.empty(this.domNode);
 				
-				
+				if (!obj){
+					callback && callback();
+					return;
+				}
+				this._mxobj = obj;
+				this._resetSubscriptions();
+				this._setupAttribute();
+				callback && callback();
+			},
+
+			_setupAttribute : function () {
 				var attributeValue = '',
 					node,
 					refNodeList;
@@ -61,17 +72,14 @@
 							} else {
 								console.warn('CssSelectorHelperWidget: Nothing found for CSS selector ' + this.cssSelector);
 							}
-							
 						} else {
-				
 							if (this.applyTo == 'Parent' ) {
 								if (this.domNode.parentNode) {
 									this.domNode.parentNode.setAttribute('cssSelectorHelper', attributeValue);
 								} else {
 									console.warn('CssSelectorHelperWidget: No parent node found');
 								}
-							}
-							else {
+							} else {
 								if (this.domNode.previousElementSibling) {
 									this.domNode.previousElementSibling.setAttribute('cssSelectorHelper', attributeValue);
 								} else {
@@ -79,33 +87,22 @@
 								}
 							}
 						}
-					}
-					else 
+					} else 
 						console.error( "CssSelectorHelperWidget: No attribute found: " + this.attributeContainingValue );
-				}
-				else 
+				} else 
 					console.error( "CssSelectorHelperWidget: No MxObject initialized" );
-            },
-			
-			update : function(obj, callback){
-				dojo.empty(this.domNode);
-				
-				if (!obj){
-					callback && callback();
-					return;
-				}
-				
-				this._mxobj = obj;
+			},
 
-				this.subscribe({
-					guid : obj.getGuid(),
-					callback : this.setupAttribute
+			_resetSubscriptions() {
+                this.unsubscribeAll();
+                this.subscribe({
+					guid : this._mxobj.getGuid(),
+					callback : function() {
+                        if(this._mxobj && !this._mxobj._unavailable) {
+                            this._setupAttribute();
+                        }
+                    }
 				});
-
-				
-				this.setupAttribute();
-
-				callback && callback();
 			}
         });
     });
